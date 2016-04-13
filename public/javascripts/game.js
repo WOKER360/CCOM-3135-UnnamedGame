@@ -1,7 +1,7 @@
 window.onload = function(){
     cc.game.onStart = function(){
         //load resources
-        cc.LoaderScene.preload(["HelloWorld.png"], function () {
+        cc.LoaderScene.preload([], function () {
             var MyScene = cc.Scene.extend({
                 onEnter:function () {
                     this._super();
