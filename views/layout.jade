@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Hello Cocos2d-JS
+    title inXile
     //script(type="text/javascript" src="/javascripts/cocos2d-js-v3.10.js" charset="UTF-8")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/style.css')
@@ -16,7 +16,7 @@ html
       div(id="sidebar-wrapper")
         ul(class="sidebar-nav")
           li
-            a(href="#") Stuff
+            a(href="#") Player List
             
       div(id="page-content-wrapper")
         nav(class="navbar navbar-default")
@@ -27,25 +27,25 @@ html
                 span(class="icon-bar")
                 span(class="icon-bar")
                 span(class="icon-bar")
-              a(class="navbar-brand" href="#" id="menu-toggle") Brand
+              a(class="navbar-brand" href="#" id="menu-toggle") inXile
 
             div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
               ul(class="nav navbar-nav")
                 li(class=(title === 'Register' ? 'active' : ''))
                   a(href="/register") Register
+                li(class=(title === 'Login' ? 'active' : ''))
+                  a(href="/Login") Login
                 li(class=(title === 'Home' ? 'active' : ''))
                   a(href="/") Info
                 li(class=(title === 'inXile' ? 'active' : ''))
                   a(href="/game") Play
-                li(class=(title === 'PlayerList' ? 'active' : ''))
-                  a(href="/players") Player List
-
               form(class="navbar-form navbar-right" role="search")
                 div(class="form-group")
-                  input(type="text" class="form-control" placeholder="Search")
+                  input(type="text" class="form-control" placeholder="Search Player")
                 button(type="submit" class="btn btn-default") Submit
       
-              block content
+            block content
+            block info
 
     script(src="https://code.jquery.com/jquery-1.12.0.min.js")
     script(src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")

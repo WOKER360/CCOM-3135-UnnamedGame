@@ -3,7 +3,7 @@ extends layout
 block content
 	#login.center-vertical
 		form.well(id='form-login', method='post')
-			h4 Create Account
+			h4 Log In
 			.form-group
 				label Username
 				input.form-control(type='text', id='user-tf', name='name')
@@ -14,23 +14,26 @@ block content
 				button(type='button').btn.btn-default.button-rememember-me
 					span.glyphicon.glyphicon-unchecked.button-rememember-me-glyph
 					| Remember Me
-				button(type='submit').btn.btn-primary.button-sign-up
+				button(type='submit').btn.btn-primary.button-log-in
 					span.glyphicon.glyphicon-lock
-					| Sign Up
+					| Log In
 			.clearfix
 			hr
 			.btm-links
 				#forgot-password
 					a(href='#') Forgot Your Password?
 				#create-account
-					a(href='/login') Already have an account? Log in
+					a(href='/register') Create Account
 			.clearfix
 
 	//include modals/alert
 	//include modals/lost-password
 
 block scripts
-//	script(src='/js/views/login.js')
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/jquery.form.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/login.js')
 	script(src='/js/controllers/loginController.js')
 	script(src='/js/form-validators/loginValidator.js')
 	script(src='/js/form-validators/emailValidator.js')
