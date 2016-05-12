@@ -6,6 +6,11 @@ html
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel="stylesheet", href="/stylesheets/nav.css")
+    script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/phaser/2.0.6/phaser.min.js")
+    script(type="text/javascript" src="https://s3.amazonaws.com/easystar/easystar-0.1.8.min.js")
+    script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(type="text/javascript" src="js/Enemy.class.js")
+    script(type="text/javascript" src="js/Tower.class.js")
   body
     div(id="wrapper")
       div(id="sidebar-wrapper")
@@ -32,13 +37,15 @@ html
                   a(href="/") Info
                 li(class=(title === 'inXile' ? 'active' : ''))
                   a(href="/game") Play
+                li(class=(title === 'PlayerList' ? 'active' : ''))
+                  a(href="/players") Player List
 
               form(class="navbar-form navbar-right" role="search")
                 div(class="form-group")
                   input(type="text" class="form-control" placeholder="Search")
                 button(type="submit" class="btn btn-default") Submit
       
-            block content
+              block content
 
     script(src="https://code.jquery.com/jquery-1.12.0.min.js")
     script(src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")
