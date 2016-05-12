@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	#login.center-vertical
+		form.well(id='form-login', method='post')
+			h2 inXile
+			h4 Create Account
+			.form-group
+				label Username
+				input.form-control(type='text', id='user-tf', name='name')
+			.form-group
+				label Password
+				input.form-control(type='password', id='pass-tf', name='password')
+			.controls
+				button(type='button').btn.btn-default.button-rememember-me
+					span.glyphicon.glyphicon-unchecked.button-rememember-me-glyph
+					| Remember Me
+				button(type='submit').btn.btn-primary.button-sign-up
+					span.glyphicon.glyphicon-lock
+					| Sign Up
+			.clearfix
+			hr
+			.btm-links
+				#forgot-password
+					a(href='#') Forgot Your Password?
+				#create-account
+					a(href='/login') Already have an account? Log in
+			.clearfix
+
+	//include modals/alert
+	//include modals/lost-password
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/jquery.form.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/login.js')
+	script(src='/js/controllers/loginController.js')
+	script(src='/js/form-validators/loginValidator.js')
+	script(src='/js/form-validators/emailValidator.js')
